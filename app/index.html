@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="GriptDemoApp">
+<html lang="en" ng-app="griptDemoApp">
 <head>
     <meta charset="UTF-8">
     <title>GRIPT Demo Application</title>
@@ -27,24 +27,8 @@
 
 <body class="no-select">
 
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" ng-controller="navigationController as vm">
-        <div class="container-fluid">
-            <div class="collapse navbar-collapse" data-collapse="vm.navbar">
-                <ul class="nav navbar-nav">
-                    <li ng-class="{ active: vm.isActive('/welcome')}"><a tabindex="1" href="#welcome" title="Home" name="home">Home</a></li>
-                    <li ng-class="{ active: vm.isActive('/portfolio')}"><a href="#portfolio" tabindex="2">Portfolio</a></li>
-                    <li ng-class="{ active: vm.isActive('/empty')}"><a href="#empty" tabindex="3">Empty</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <div class="container" ng-view></div>
-
-    <div id="footer">
-        <div class="container">
-        </div>
-    </div>
+    <foo-bar ng-controller="FooBarController as vm">
+    </foo-bar>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
@@ -61,8 +45,17 @@
     <!-- endbuild -->
     <!-- build:js scripts/main.js -->
     <!-- inject:js -->
+    <script src="../target/tmp/js/modernizr.js"></script>
+    <script src="lib/external.js"></script>
+    <script src="app.js"></script>
+    <script src="../target/tmp/js/constants.js"></script>
+    <script src="components/foo-bar/foo-bar.js"></script>
+    <script src="components/foo-bar/foo-bar-directive.js"></script>
+    <script src="components/foo-bar/foo-bar-controller.js"></script>
     <!-- endinject -->
     <!-- inject:partials -->
+    <script src="../target/tmp/partials/components/foo-bar/foo-bar.js"></script>
+    <script src="../target/tmp/partials/foo-bar/foo-bar.js"></script>
     <!-- endinject -->
     <!-- endbuild -->
 </body>

@@ -10,10 +10,10 @@ require('gript')(gulp);
 gulp.config = {
   repository: 'https://github.com/dalsgaard/gript-demo.git',
   app: {
-    module: 'GriptDemoApp',
+    module: 'griptDemoApp',
     constantsFile: 'app/constants.json'
   },
-  partials: ['app/**/*.html'],
+  partials: ['app/components/**/*.html'],
   server: {
     port: 8080,
     host: 'localhost',

@@ -1,4 +1,3 @@
 'use strict';
 
-console.log('Foo!');
-angular.module('GriptDemoApp', []);
+angular.module('griptDemoApp', ['fooBar']);

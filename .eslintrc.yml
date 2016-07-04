@@ -1,3 +1,14 @@
+plugins:
+  - angular
+
+globals:
+  angular: false,
+  describe: false,
+  it: false,
+  beforeEach: false,
+  expect: false,
+  inject: false
+
 ecmaFeatures:
   jsx: false
 
@@ -124,7 +135,7 @@ rules:
   no-ternary: 0 # disallow the use of ternary operators
   no-trailing-spaces: 2 # disallow trailing whitespace at the end of lines
   no-underscore-dangle: 0 # disallow dangling underscores in identifiers
-  one-var: 2 # allow just one var statement per function
+  one-var: 0 # allow just one var statement per function
   operator-assignment: 0 # require assignment operator shorthand where possible or prohibit it entirely
   padded-blocks: 0 # enforce padding within blocks
   quote-props: [0, "as-needed"] # require quotes around object literal property names

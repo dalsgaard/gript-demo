@@ -5,7 +5,7 @@
   "attr-quote-style": "double",
   "attr-req-value": false,
   "class-style": "dash",
-  "doctype-first": true,
+  "doctype-first": false,
   "doctype-html5": true,
   "html-req-lang": true,
   "id-class-style": false,
