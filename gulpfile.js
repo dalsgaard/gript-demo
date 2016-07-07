@@ -19,6 +19,17 @@ gulp.config = {
     host: 'localhost',
     livereload: {
       port: 35729
+    },
+    middleware: function () {
+      return [require('http-proxy-middleware')(
+        [
+          '/foo/',
+          '/bar/baz/'
+        ],
+        {
+          target: 'http://localhost:3000'
+        }
+      )];
     }
   },
   serverDist: {
@@ -27,8 +38,8 @@ gulp.config = {
   },
   proxy: {
     port: 8001,
-    hostHeader: 'no-specified-hostHeader',
-    targetURL: 'http://no-specified-project-url'
+    hostHeader: 'localhost',
+    targetURL: 'http://localhost:8340'
   },
   /*
   mocks: {
